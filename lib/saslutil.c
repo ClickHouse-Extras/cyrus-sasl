@@ -522,7 +522,7 @@ int get_fqhostname(
 )
 {
     int return_value;
-    struct addrinfo hints;
+    struct addrinfo hints = {};
     struct addrinfo *result;
 
     return_value = gethostname (name, namelen);
